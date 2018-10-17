@@ -18,7 +18,7 @@ int main()
 
 	double scheduledMonthlyPayment = 0.0;
 
-	cout << "Payment" << "\t\t" << "beginning balance" << "\t" << "interest" << "\t" << payment << "ending balance" << endl;
+    cout << "payment #" << "\t\t" << "beginning balance" << "\t" << "interest" << "\t" << "payment" << "\t\t" << "ending balance" << endl;
 
 	while(counter < Loanterm)
 	{
@@ -31,13 +31,12 @@ int main()
 			newPrincipal = 0.0;
 
 		cout << setprecision(2) << fixed;
-		cout << setw(3) << counter << "\t\t\t" << principal << "\t\t" << monthlyInterest << "\t\t" << scheduledMonthlyPayment << "\t\t" << newPrincipal << endl;
-
-		// exit loop
-		if (newPrincipal == 0.0)
-			break;
+		cout << setw(3) << counter << "\t\t\t" << principal << "\t\t\t" << monthlyInterest << "\t\t" << scheduledMonthlyPayment << "\t\t" << newPrincipal << endl;
 
 		principal = newPrincipal;
+        
+        // exit loop
+        if (principal == 0.0) break;
 		counter++;
 	}
 
